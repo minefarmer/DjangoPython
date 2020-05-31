@@ -1,3 +1,8 @@
+# More about lists 55
+# 
+# 
+
+
 list_1 = ['carl', 'ali', 'john', 'maryam']
 
 # print(list_1)  # ['carl', 'ali', 'john', 'maryam']
@@ -44,3 +49,14 @@ print(list_1)  # ['ali', 'john', 'maryam']
 a = list_1.pop(0)
 print(list_1)  # ['john', 'maryam']
 print(a)  # ali
+
+
+
+# More about lists 55
+>>> l = [1]
+>>> l
+[1]
+>>> l[:0] = [2, 3, 4]
+>>> l
+[2, 3, 4, 1]
+>>> 
