@@ -40,9 +40,9 @@ l.append(users);l.append(password)
 #             #     del l[0][0]
 #             # TypeError: 'tuple' object doesn't support item deletion
 
-print(l[0].index('rich'))  # 0
+# print(l[0].index('rich'))  # 0
 
-
+print(l[0].index('carl'))  # 1
 
 
 
