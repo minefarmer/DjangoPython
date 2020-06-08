@@ -102,5 +102,24 @@ default parameters by definition are the parameters that are defined with in the
 
 
 
-#  using a default parameter
-def get_names()
+# #  using a default parameter  *** user giving middle name
+# def get_names(first_name, last_name, middle_name=''):
+#     if middle_name:
+#         full_name = first_name + ' ' + middle_name + ' ' + last_name
+#     else:
+#         full_name = first_name + ' ' + last_name
+#     return full_name
+
+# print(get_names('carl', 'matson', 'richard'))  # carl richard matson
+
+
+#  using a default parameter  *** user ++++ NOT ++++ giving middle name
+def get_names(first_name, last_name, middle_name=''):
+    if middle_name:
+        full_name = first_name + ' ' + middle_name + ' ' + last_name
+    else:
+        full_name = first_name + ' ' + last_name
+    return full_name
+
+print(get_names('carl', 'matson'))  # carl matson
+
