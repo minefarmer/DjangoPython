@@ -1,13 +1,3 @@
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
 class Car():
     """ info car """
     def __init__(self, make, model, year):
@@ -54,3 +44,6 @@ class Battery():
     def describe_battery(self):
         """printing info about battery"""
         print('this car has a ' + str(self.battery_size) + ' kwh battery.')
+
+my_car = Car('audi', 'a4', 2016)
+print(my_car.get_des())  # 2016 Audi A4
