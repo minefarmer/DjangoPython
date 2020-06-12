@@ -1,0 +1,4 @@
+hello world
+ this is python3 
+ python3 is the best 
+ how to open files in python3
