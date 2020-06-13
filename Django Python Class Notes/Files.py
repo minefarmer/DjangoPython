@@ -5,7 +5,7 @@
 # # #   readlines  # 100  
 # class string  # 105
 # #  class list  # 115
-# 
+# Using rstrip  145
 # 
 # 
 
@@ -113,7 +113,7 @@
   
     
 # #  class list 
-# filename = 'Django Python Class Notes/carl.txt'
+# filename = 'Django Python Class Notes/testA.txt'
 # with open(filename) as file:
 #     line = file.readlines()
     
@@ -123,7 +123,27 @@
 #     print(i)
 
 
-# filename = 'Django Python Class Notes/carl.txt'
+# filename = 'Django Python Class Notes/testA.txt'
+# with open(filename) as file:
+#     line = file.readlines()
+    
+# string = ''
+    
+# for i in line:
+#     # string += i.rstrip()
+
+#   string = ''
+
+#     print(i)  # hello world
+
+#                 # this is python3
+
+#                 # python3 is the best
+
+#                 # how to open files in python3
+
+# # Using rstrip  145
+# filename = 'Django Python Class Notes/testA.txt'
 # with open(filename) as file:
 #     line = file.readlines()
     
@@ -135,13 +155,36 @@
 #     print(string)  # hello world
 
 
+#     # print(i)  # hello world
+#                 # this is python3
+#                 # python3 is the best
+#                 # how to open files in python3
 
 
-# filename = 'Django Python Class Notes/carl.txt'
-with open('carl.txt, 'r' ) as file:
-    file = file.readlines()
-string = ''
+# filename = 'Django Python Class Notes/testA.txt'
+# with open(filename, 'r') as file:
+#     file = file.readlines()  
+# string = ''
     
-# for i in file:
-#     string += f.rstrip()
-#     print(string)  # hello world
+# for f in file:
+#     string += f.strip()
+
+# if 'python' in string:
+#     print('yes')  # yes
+# else:
+#     print('no')
+    
+
+# with open('Django Python Class Notes/carl2.txt', 'w') as file:
+#     file.write('hello world\n')
+#     file.write('this is python learning\n')
+#     file.write('how to write data in a file with python')
+# file.close()
+
+
+with open('Django Python Class Notes/carl2.txt') as f:
+    f = f.read()
+print(f)  # hello world
+            # this is python learning
+            # how to write data in a file with python
+
