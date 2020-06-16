@@ -16,9 +16,15 @@
 
 
 
-
+# /usr/bin/python3 "/home/carl/Github/DjangoPython/Django Python Class Notes/Argv.py"
 
 from sys import argv
 
-script, user_name = argv
-print('hi')
+s, user_name = argv
+p = '> '
+# print(f'hi {user_name}')
+print(f'I like to ask you a few questions {user_name}')
+print(f'where do you live {user_name}')
+like = input(p)
+
+print()
