@@ -20,5 +20,9 @@
 
 from sys import argv
 
-script, user_name = argv
-print('hi')
+s, user_name = argv
+
+
+
+print(f'hi {user_name}')
+
