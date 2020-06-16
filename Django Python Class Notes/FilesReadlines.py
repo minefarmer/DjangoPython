@@ -4,9 +4,9 @@
 # more on readlines 55
 # more on readlines 65
 # usng (for i in line) 76
-# using i.string 94
-# 
-# 
+# using f.strip 94
+# using f.strip 107
+# writing to file 124
 
 # file_path = 'Django Python Class Notes/carl3.py'
 
@@ -91,13 +91,46 @@
 
 
 
-#  using i.string 94
-filename = 'Django Python Class Notes/rich.txt'
-with open(filename) as file:
-    line = file.readlines()
+# #  using i.strip 94
+# filename = 'Django Python Class Notes/rich.txt'
+# with open(filename) as file:
+#     line = file.readlines()
     
-string = ''
+# string = ''
     
-for i in line:
-    string += i.strip()
-print(string)  # hello worldthis is pythonpython is the besthow to open files in python
+# for i in line:
+#     string += i.strip()
+# print(string)  # hello worldthis is pythonpython is the besthow to open files in python
+
+
+
+# #  using f.strip 107
+# with open('Django Python Class Notes/rich.txt', 'r') as file:
+#     file = file.readlines()    
+# string = ''
+
+
+# for f in file:
+#     string += f.strip()
+    
+    
+# if 'python' in string:
+#     print('yes')  # yes
+# else:
+#     print('no')
+
+
+
+#  writing to file 124
+with open('Django Python Class Notes/rich.txt', 'w') as file:
+    file.write('hello world\n')
+    file.write('this is python learning\n')
+    file.write('how to write data in the file with python')
+file.close()
+
+
+with open('Django Python Class Notes/rich.txt') as f:
+    f = f.read()
+print(f)  # hello world
+            # this is python learning
+            # how to write data in the file with python
