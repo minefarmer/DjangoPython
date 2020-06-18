@@ -110,9 +110,11 @@
 
 
 
-# raise NameError  117
-
-
+# raise NameError  119
+# Value error  132
+# nameError  150
+# ZeroDivisionError  159
+# 
 
 # raise NameError
 # print('1')  # 1
@@ -127,8 +129,40 @@
 
 
 
+#  Value error  132
+# try:
+#     print(1/0)  # Traceback (most recent call last):
+#                 # File "/home/carl/Github/DjangoPython/Django Python Class Notes/TryExceptFinal.py", line 132, in <module>
+#                 #     print(1/0)
+#                 # ZeroDivisionError: division by zero
 
+#                 # During handling of the above exception, another exception occurred:
+
+#                 # Traceback (most recent call last):
+#                 # File "/home/carl/Github/DjangoPython/Django Python Class Notes/TryExceptFinal.py", line 134, in <module>
+#                 #     raise ValueError
+#                 # ValueError
+# except ZeroDivisionError:
+#     raise ValueError
+
+
+
+# nameError  150
+# name = '123'
+# raise NameError('this is name error')  # Traceback (most recent call last):
+#                                         # File "/home/carl/Github/DjangoPython/Django Python Class Notes/TryExceptFinal.py", line 152, in <module>
+#                                         #     raise NameError('this is name error')
+#                                         # NameError: this is name error
+
+
+
+# ZeroDivisionError  159
 try:
-    print(1/0)
-except ZeroDivisionError:
-    raise ValueError
+    num = 5 / 0
+except:
+    print('An error')  # An error
+                        # Traceback (most recent call last):
+                        # File "/home/carl/Github/DjangoPython/Django Python Class Notes/TryExceptFinal.py", line 162, in <module>
+                        #     num = 5 / 0
+                        # ZeroDivisionError: division by zero
+    raise 
