@@ -1,1 +1,3 @@
 Installed in LMDE as Python3-tk
+
+Win 10 install
