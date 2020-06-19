@@ -33,6 +33,18 @@ else:
     
 win = tk.Tk()
 win.title('copy.....')
+aLabel = ttk.Label(win, text='copy {} to {}'.format(file_name, file_name2))
+aLabel.grid(column=0, row=0)
+
+def Copy():
+    f2 = open(file_name2, 'w')
+    action.configure(f2.write(f))
+    aLabel.configure(foreground='red')
+    f2.close()
+
+action = ttk.Button(win, text='click to copy', command=Copy)
+action.grid(column=1, row=0)
+
 
 win.mainloop()
     
