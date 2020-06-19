@@ -21,3 +21,16 @@ from sys import argv, exit
 
 
 
+
+if argv[1:]:
+    file_name = argv[1]
+    file_name2 = argv[2]
+    with open(file_name) as file:
+        f = file.read()
+else:
+    print('please enter filename at start of program')
+    exit(0)
+    
+win.title('copy file.....')
+    
+
