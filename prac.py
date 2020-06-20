@@ -1,52 +1,66 @@
-import tkinter as tk
+import tkinter as tk 
 from tkinter import ttk
-from sys import argv, exit
+
 # 
 # 
 # 
 # 
 # 
-# 
-# 
 
-# class Test():
-#     print('hello world!')  # hello world!
-    
-# classinstance = Test()
+# win = tk.Tk()
+# win.title('Python tkinter ')
 
+# aLabel = ttk.Label(win, text='File name: ')
+# aLabel.grid(column=0, row=0)
 
+# def clickMe():
+#     file_name = name.get()
+#     with open(file_name) as file:
+#         f = file.read()
+        
+#     action.configure(text=f)
+#     aLabel.configure(foreground='green')
 
+# action = ttk.Button(win, text='click me', command=clickMe)
+# action.grid(column=1, row=1)
 
+# name = tk.StringVar()
 
+# textbox = ttk.Entry(win, width=12, textvariable=name)
+# textbox.grid(column=0, row=1)
 
+# win.mainloop()
 
-
-
-if argv[1:]:
-    file_name = argv[1]
-    file_name2 = argv[2]
-    with open(file_name) as file:
-        f = file.read()
-else:
-    print('please enter filename at start of program')
-    exit(0)
-    
+##########################################
 win = tk.Tk()
-win.title('copy.....')
-aLabel = ttk.Label(win, text='copy {} to {}'.format(file_name, file_name2))
+win.title('copy .... past')
+
+aLabel = ttk.Label(win, text= 'enter file name!!!')
 aLabel.grid(column=0, row=0)
 
-def Copy():
-    f2 = open(file_name2, 'w')
-    action.configure(f2.write(f))
-    aLabel.configure(foreground='red')
-    f2.close()
+def clickMe():
+    file_name1 = name.get()
+    with open(file_name1) as file:
+        f1 = file.read()
+        
 
-action = ttk.Button(win, text='click to copy', command=Copy)
-action.grid(column=1, row=0)
+
+    action.configure()
+
+
+
+
+
+
+
+action = ttk.Button(win, text='click to copy', command=clickMe)
+action.grid(column=1, row=1)
+name = tk.StringVar()
+name1 = tk.StringVar()
+Textbox = ttk.Entry(win, width=12, textvariable=name)
+Textbox.grid(column=0, row=1)
+Textbox2 = ttk.Entry(win, width=12, textvariable=name1).grid(column=0, row=2)
+
 
 
 win.mainloop()
-    
-
-
