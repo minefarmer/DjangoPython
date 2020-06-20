@@ -39,19 +39,24 @@ aLabel = ttk.Label(win, text= 'enter file name!!!')
 aLabel.grid(column=0, row=0)
 
 def clickMe():
-    file_name1 = name.get()
-    with open(file_name1) as file:
-        f1 = file.read()
+    try:
+        file_name1 = name.get()
+        with open(file_name1) as file:
+            f1 = file.read()
+        file_name2 = name1.get()
+        f2 = open(file_name2, 'w')
+        aLabel.configure(foreground='green')
+        action.configure(f2.write(f1))
+        f2.close()
+    
+
         
-
-
-    action.configure()
-
-
-
-
-
-
+    except:
+        action.configure(text='OK ! file has been written')
+        with open (file_name2) as file:
+            f2 = file.read
+        action.configure(text=f2)
+        # print('OK file has been copied....')
 
 action = ttk.Button(win, text='click to copy', command=clickMe)
 action.grid(column=1, row=1)
