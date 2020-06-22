@@ -22,10 +22,20 @@ colors = ['Blue', 'Gold', 'Red']
 
 radvar = tk.IntVar()
 
+
+def radcall():
+    radsel = radvar.get()
+    if radsel == 0: win.configure(background=colors[0])
+    elif radsel == 1: win.configure(background=colors[1])
+    elif radsel == 2: win.configure(background=colors[2])
+
+
+
+
 for r in range(3):
     corerad = 'rad' + str(r)
     corerad = tk.Radiobutton(win, text=colors[r], variable=radvar, value=r, command=radcall)
-
-
+    corerad.grid(column=r, row=3)
+    
 
 win.mainloop()
