@@ -1,74 +1,42 @@
 import tkinter as tk 
 from tkinter import ttk
+from tkinter import Menu
+from tkinter import messagebox as mBox
 from tkinter import scrolledtext
 
-# not used much  8 
-# normally used 24
-# 
-# win = tk.Tk()
-# win.title('python gui')
-
-# labelframe = ttk.LabelFrame(win, text='Labels')
-# labelframe.grid(column=0, row=0, padx=20, pady=40)
-# ttk.Label(labelframe, text='Label1------------- soooooo loooooooooongeeeeeeeee').grid(column=0, row=0)
-# ttk.Label(labelframe, text='Label2').grid(column=0, row=1)
-# ttk.Label(labelframe, text='Label3').grid(column=0, row=2)
-# ttk.Label(labelframe, text='Label4').grid(column=0, row=3)
-
-# for c in labelframe.winfo_children():
-#     c.grid_configure(padx=8, pady=4)
-
-# win.mainloop()
-
-
 win = tk.Tk()
-win.title('python gui')
+win.title('python GUI')
 
-monty = ttk.LabelFrame(win, text=' Monty Python ')
-monty.grid(column=0, row=0)
+def msgbox():
+    mBox.showinfo('python is the best', 'thjs is msgbox')
+def msgbox2():
+    mBox.showwarning('', 'this is a warning')
+def msgbox3():
+    mBox.showerror('python error', 'a python GUI using tkinter \n Error ')
+def msgbox4():
+    answer = mBox.askyesno('python message dual choice Box', 'Are You Sure? ')
+    print(answer)
+menubar = Menu(win)
+win.configure(menu=menubar)
+filemenu = Menu(menubar, tearoff=0)
+helpmenu = Menu(menubar, tearoff=0)
+filemenu.add_command(label='New')
+helpmenu.add_command(label='About', command=msgbox)
+helpmenu.add_command(label='warning', command=msgbox2)
+helpmenu.add_command(label='Error', command=msgbox3)
+helpmenu.add_command(label='Yesno', command=msgbox4)
+menubar.add_cascade(label='File', menu=filemenu)
+menubar.add_cascade(label='Help', menu=helpmenu)
+def _spin():
+    value = spin.get()
+    print(value)
+    scr.insert(tk.INSERT, value + '\n')
+# spin = tk.Spinbox(win, from_ = 0, to=10, width=10, bd=8, command=_spin)
+spin = tk.Spinbox(win, values=(1, 2, 3, 4, 5, 6, 42, 50, 100, 90), width=10, bd=8, command=_spin)
+spin.grid(column=0, row=0)
+scr = scrolledtext.ScrolledText(win, width=30, height=3, wrap=tk.WORD)
+scr.grid(column=0, row=1, sticky='WE', columnspan=3)
 
-label1 = ttk.Label(monty, text='Enter a name! ')
-label1.grid(column=0, row=0)
-
-name = tk.StringVar()
-textb = ttk.Entry(monty, width=12, textvariable=name)
-textb.grid(column=0, row=1)
-textb.focus()
-label2 = ttk.Label(monty, text='Choose anumber: ')
-label2.grid(column=1, row=0)
-
-number = tk.StringVar()
-cbox = ttk.Combobox(monty, width=12, textvariable=number)
-cbox['values'] = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-cbox.current(0)
-cbox.grid(column=1, row=1)
-
-def clickMe():
-    if chvar1.get() == 1:
-        label1.configure(foreground='red')
-    elif chvar1.get() == 0:
-        label1.configure(foreground='black')
-    if chvar2.get() == 1:
-        label2.configure(foreground='gold')
-    elif chvar2.get() == 0:
-        label2.configure(foreground='black')
-
-
-action = ttk.Button(monty, text='click me', command=clickMe)
-action.grid(column=2, row=1)
-
-chvar1 = tk.IntVar()
-checkB1 = tk.Checkbutton(monty, text='Disable', variable=chvar1, command=clickMe)
-checkB1.grid(column=0, row=2)
-chvar2 = tk.IntVar()
-checkB2 = tk.Checkbutton(monty, text='Unchecked', variable=chvar2, command=clickMe)
-checkB2.grid(column=1, row=2)
-chvar3 = tk.IntVar()
-checkB3 = tk.Checkbutton(monty, text='togg', variable=chvar3, command=clickMe)
-checkB3.grid(column=2, row=2)
-scr = scrolledtext.ScrolledText(monty, width=30, height=3, wrap=tk.WORD)
-scr.grid(column=0, sticky='WE', columnspan=3)
-# scr.grid(column=0, columnspan=3)
 
 
 
